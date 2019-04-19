@@ -56,7 +56,7 @@ setnames(extract_df,old = oldcolumns,
 ##    with the average of each variable for each activity and each subject.
 
 tidy_df <- gather(extract_df, typemeasure, measure, -(c("subject", "activity")))
-tidy_df <- group_by(tidy_df,subject,typemeasure)
-tidy_df <- summarize(tidy_df, mean(measure))
+tidy_df <- group_by(tidy_df,subject,activity,typemeasure)
+tidy_df$measure <- mean(tidy_df$measure)
 
 write.table(tidy_df,file="tidy_df.txt",row.name=FALSE)

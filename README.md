@@ -92,8 +92,8 @@ To create the tidy dataframe I want to use 3 function, first I gather the column
 
 ```{r}
 tidy_df <- gather(extract_df, typemeasure, measure, -(c("subject", "activity")))
-tidy_df <- group_by(tidy_df,subject,typemeasure)
-tidy_df <- summarize(tidy_df, mean(measure))
+tidy_df <- group_by(tidy_df,subject,activity,typemeasure)
+tidydata <- summarise(tidy_df,mean(measure))
 ```
 
 

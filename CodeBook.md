@@ -62,22 +62,24 @@ The result have the followinf dimensions
 ---------------------------------
 Feature                    Result
 ------------------------ --------
-Number of observations       1980
+Number of observations      11880
 
-Number of variables             3
+Number of variables             4
 ---------------------------------
 
 # Tidy Data Set summary table
 
----------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 Label   Variable              Class         # unique  Missing  Description  
                                               values                        
-------- --------------------- ----------- ---------- --------- ------------------
-        **[subject]**         integer             30  0.00 %    Id of the subjects            
+------- --------------------- ----------- ---------- --------- -------------
+        **[subject]**         integer             30  0.00 %    Id of Sub           
+
+        **[activity]**        factor               6  0.00 %    Activity            
 
         **[typemeasure]**     character           66  0.00 %    Features            
 
-        **[mean(measure)]**   numeric           1920  0.00 %    mean of each measure            
+        **[mean(measure)]**   numeric          11520  0.00 %    Mean             
 ----------------------------------------------------------------------------
 
 Report generation information:
